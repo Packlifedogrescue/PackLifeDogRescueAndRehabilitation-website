@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, ArrowUpRight, Shield, HeartHandshake, PawPrint, Phone, Mail, Compass } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function PackLifeWebsite() {
   const [active, setActive] = useState("about");
@@ -430,6 +431,7 @@ export default function PackLifeWebsite() {
           </>
         )}
       </main>
+      <Analytics />
     </div>
   );
 }
