@@ -207,7 +207,7 @@ export default function PackLifeWebsite() {
               <div className="text-center">
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E0C15A]">Contact Us</p>
                 <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl">Get in touch with Pack Life.</h1>
-                <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">Reach out for rescue inquiries, adoption questions, partnerships, or support. We respond with clarity and purpose.</p>
+                <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">Reach out for rescue inquiries, adoption questions, partnerships, or support.</p>
               </div>
 
               <div className="mt-14 grid items-start gap-6 lg:grid-cols-[1.05fr_0.95fr]">
