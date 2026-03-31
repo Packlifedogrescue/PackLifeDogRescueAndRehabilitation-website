@@ -36,7 +36,7 @@ export default function PackLifeWebsite() {
   const founderCards = [
     { name: "KayLee Conkling", role: "President / Co-Founder", initials: "KC", bio: "Oversees mission direction, rescue operations, placement standards, and organizational leadership." },
     { name: "Brett Miller", role: "Vice President / Co-Founder", initials: "BM", bio: "Supports operations, structure-based rehabilitation, strategic growth, and long-term rescue planning." },
-    { name: "Cameron", role: "Treasurer & Secretary", initials: "C", bio: "Supports financial oversight, records, documentation, board coordination, and organizational administration." },
+    { name: "Cameron Carroll", role: "Treasurer & Secretary", initials: "C", bio: "Supports financial oversight, records, documentation, board coordination, and organizational administration." },
   ];
 
   useEffect(() => {
