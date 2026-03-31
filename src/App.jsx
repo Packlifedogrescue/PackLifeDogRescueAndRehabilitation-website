@@ -209,23 +209,45 @@ export default function PackLifeWebsite() {
                 <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl">Get in touch with Pack Life.</h1>
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">Reach out for rescue inquiries, adoption questions, partnerships, or support. We respond with clarity and purpose.</p>
               </div>
-              <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className={`rounded-[2rem] border border-[#2E5B86]/80 ${CardGradient} p-8 shadow-[0_24px_48px_rgba(0,0,0,0.18)]`}>
+
+              <div className="mt-14 grid items-start gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+                <div className={`self-start rounded-[2rem] border border-[#2E5B86]/80 ${CardGradient} p-8 shadow-[0_24px_48px_rgba(0,0,0,0.18)]`}>
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h2 className="text-2xl font-bold text-white">Direct Contact</h2>
-                      <p className="mt-3 text-[#DCE7F2] leading-8">Send a message below or use the direct contact details for questions, support, or partnership inquiries.</p>
+                      <p className="mt-3 max-w-[30rem] text-[#DCE7F2] leading-7">
+                        Send a message below or use the direct contact details for questions, support, or partnership inquiries.
+                      </p>
                     </div>
                     <div className="rounded-2xl border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-3 text-right">
                       <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E0C15A]">Response Time</p>
                       <p className="mt-2 text-sm font-bold text-white">24–48 hours</p>
                     </div>
                   </div>
-                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-2xl border border-[#2E5B86]/70 bg-[rgba(255,255,255,0.03)] p-5"><div className="flex items-center gap-3"><Mail className="text-[#E0C15A]" /><div><p className="text-xs uppercase tracking-[0.26em] text-[#8FA6BE]">Email</p><p className="mt-2 font-semibold text-white">info@packlifedogrescue.org</p></div></div></div>
-                    <div className="rounded-2xl border border-[#2E5B86]/70 bg-[rgba(255,255,255,0.03)] p-5"><div className="flex items-center gap-3"><Phone className="text-[#E0C15A]" /><div><p className="text-xs uppercase tracking-[0.26em] text-[#8FA6BE]">Phone</p><p className="mt-2 font-semibold text-white">717-706-4748</p></div></div></div>
+
+                  <div className="mt-6 grid gap-4 md:grid-cols-2">
+                    <div className="rounded-2xl border border-[#2E5B86]/70 bg-[rgba(255,255,255,0.03)] p-5">
+                      <div className="flex items-center gap-3">
+                        <Mail className="text-[#E0C15A]" />
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.26em] text-[#8FA6BE]">Email</p>
+                          <p className="mt-2 font-semibold text-white">info@packlifedogrescue.org</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-[#2E5B86]/70 bg-[rgba(255,255,255,0.03)] p-5">
+                      <div className="flex items-center gap-3">
+                        <Phone className="text-[#E0C15A]" />
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.26em] text-[#8FA6BE]">Phone</p>
+                          <p className="mt-2 font-semibold text-white">717-706-4748</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
                 <div className={`rounded-[2rem] border border-[#2E5B86]/80 ${DarkGradient} p-8 shadow-[0_24px_48px_rgba(0,0,0,0.18)]`}>
                   <h2 className="text-2xl font-bold text-white">Send a Message</h2>
                   <p className="mt-3 text-[#DCE7F2] leading-8">Use this form to reach Pack Life directly.</p>
