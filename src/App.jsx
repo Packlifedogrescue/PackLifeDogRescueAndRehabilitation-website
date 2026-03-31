@@ -88,7 +88,7 @@ export default function PackLifeWebsite() {
       bio: "Supports operations, structure-based rehabilitation, strategic growth, and long-term rescue planning.",
     },
     {
-      name: "Cameron",
+      name: "Cameron Carroll",
       role: "Treasurer & Secretary",
       initials: "C",
       bio: "Supports financial oversight, records, documentation, board coordination, and organizational administration.",
