@@ -1,4 +1,3 @@
-
 import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, ArrowUpRight, Shield, HeartHandshake, PawPrint, Phone, Mail, Compass } from "lucide-react";
 
