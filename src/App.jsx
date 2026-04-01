@@ -277,11 +277,11 @@ export default function PackLifeWebsite() {
                   Meet the Staff
                 </p>
                 <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl">
-                  Leadership behind Pack Life.
+                  Leadership behind Pack Life Dog Rescue And Rehabilitation.
                 </h1>
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
                   Meet the people responsible for protecting the mission,
-                  guiding operations, and building Pack Life the right way.
+                  guiding operations, and building Pack Life Dog Rescue And Reahabilitation the right way.
                 </p>
               </div>
 
@@ -362,7 +362,7 @@ export default function PackLifeWebsite() {
                     Step in and help build stability.
                   </h2>
                   <p className="mt-5 text-[#DCE7F2] leading-8">
-                    Fosters are a major part of the Pack Life process. Start
+                    Fosters are a major part of the Pack Life Dog Rescue And Rehabilitation process. Start
                     here if you want to help provide structure, decompression,
                     and a stable bridge toward the right long-term placement.
                   </p>
