@@ -388,7 +388,7 @@ export default function PackLifeWebsite() {
                   Contact Us
                 </p>
                 <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl">
-                  Get in touch with Pack Life.
+                  Get in touch with Pack Life Dog Rescue And Rehabilitation.
                 </h1>
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
                   Reach out for rescue inquiries, adoption questions,
@@ -459,7 +459,7 @@ export default function PackLifeWebsite() {
                     Send a Message
                   </h2>
                   <p className="mt-3 text-[#DCE7F2] leading-8">
-                    Use this form to reach Pack Life directly.
+                    Use this form to reach Pack Life Dog Rescue And Rehabilitation directly.
                   </p>
 
                   {showContactThankYou ? (
@@ -686,7 +686,7 @@ export default function PackLifeWebsite() {
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E0C15A]">
-                            Pack Life Standard
+                            Pack Life Dog Rescue And Rehabilitation Standard
                           </p>
                           <h2 className="mt-3 text-2xl font-black text-white">
                             We do not place dogs. We build them first.
@@ -843,7 +843,7 @@ export default function PackLifeWebsite() {
                     Principles that drive every decision.
                   </h2>
                   <p className="mt-4 mx-auto max-w-2xl text-[#DCE7F2] leading-8">
-                    Click each principle below to learn how Pack Life
+                    Click each principle below to learn how Pack Life Dog Rescue And Rehabilitation
                     approaches rehabilitation, structure, and placement.
                   </p>
                 </div>
