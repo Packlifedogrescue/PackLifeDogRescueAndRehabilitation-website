@@ -8,6 +8,8 @@ import {
   Phone,
   Mail,
   Compass,
+  Heart,
+  HandCoins,
 } from "lucide-react";
 
 export default function PackLifeWebsite() {
@@ -19,11 +21,16 @@ export default function PackLifeWebsite() {
   const [showContactThankYou, setShowContactThankYou] = useState(false);
   const [selectedInquiryType, setSelectedInquiryType] = useState("");
 
+  // REPLACE THESE WITH YOUR REAL STRIPE LINKS LATER
+  const oneTimeDonateLink = "#";
+  const monthlyDonateLink = "#";
+
   const navItems = useMemo(
     () => [
       ["about", "About"],
       ["dogs", "Available Dogs"],
       ["philosophy", "Philosophy"],
+      ["donate", "Donate"],
       ["contact", "Contact"],
     ],
     []
@@ -101,6 +108,7 @@ export default function PackLifeWebsite() {
       if (hash === "founders") return setPage("founders");
       if (hash === "apply") return setPage("apply");
       if (hash === "contact") return setPage("contact");
+      if (hash === "donate") return setPage("donate");
       setPage("home");
     };
 
@@ -231,10 +239,19 @@ export default function PackLifeWebsite() {
               <a
                 key={id}
                 href={`#${id}`}
-                onClick={() => setPage(id === "contact" ? "contact" : "home")}
+                onClick={() =>
+                  setPage(
+                    id === "contact"
+                      ? "contact"
+                      : id === "donate"
+                      ? "donate"
+                      : "home"
+                  )
+                }
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
                   (page === "home" && active === id) ||
-                  (page === "contact" && id === "contact")
+                  (page === "contact" && id === "contact") ||
+                  (page === "donate" && id === "donate")
                     ? "bg-white/10 text-[#E0C15A] shadow-[inset_0_0_0_1px_rgba(224,193,90,0.18)]"
                     : "text-[#DCE7F2] hover:bg-white/5 hover:text-[#E0C15A]"
                 }`}
@@ -281,7 +298,8 @@ export default function PackLifeWebsite() {
                 </h1>
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
                   Meet the people responsible for protecting the mission,
-                  guiding operations, and building Pack Life Dog Rescue And Reahabilitation the right way.
+                  guiding operations, and building Pack Life Dog Rescue And
+                  Reahabilitation the right way.
                 </p>
               </div>
 
@@ -319,9 +337,9 @@ export default function PackLifeWebsite() {
                   Apply with clarity.
                 </h1>
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
-                  Start with the path that fits you best. Pack Life reviews
-                  every application with structure, honesty, and long-term
-                  placement success in mind.
+                  Start with the path that fits you best. Pack Life reviews every
+                  application with structure, honesty, and long-term placement
+                  success in mind.
                 </p>
               </div>
 
@@ -362,9 +380,10 @@ export default function PackLifeWebsite() {
                     Step in and help build stability.
                   </h2>
                   <p className="mt-5 text-[#DCE7F2] leading-8">
-                    Fosters are a major part of the Pack Life Dog Rescue And Rehabilitation process. Start
-                    here if you want to help provide structure, decompression,
-                    and a stable bridge toward the right long-term placement.
+                    Fosters are a major part of the Pack Life Dog Rescue And
+                    Rehabilitation process. Start here if you want to help
+                    provide structure, decompression, and a stable bridge toward
+                    the right long-term placement.
                   </p>
                   <div className="mt-7 flex flex-wrap gap-4">
                     <a
@@ -459,7 +478,8 @@ export default function PackLifeWebsite() {
                     Send a Message
                   </h2>
                   <p className="mt-3 text-[#DCE7F2] leading-8">
-                    Use this form to reach Pack Life Dog Rescue And Rehabilitation directly.
+                    Use this form to reach Pack Life Dog Rescue And
+                    Rehabilitation directly.
                   </p>
 
                   {showContactThankYou ? (
@@ -534,9 +554,7 @@ export default function PackLifeWebsite() {
                         </span>
                         <select
                           value={selectedInquiryType}
-                          onChange={(e) =>
-                            setSelectedInquiryType(e.target.value)
-                          }
+                          onChange={(e) => setSelectedInquiryType(e.target.value)}
                           name="Inquiry Type"
                           required
                           className="w-full rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-4 py-3 text-white outline-none transition focus:border-[#D4AF37]/40 focus:bg-white/[0.05]"
@@ -601,13 +619,184 @@ export default function PackLifeWebsite() {
                           disabled={contactStatus === "sending"}
                           className="rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A] disabled:cursor-not-allowed disabled:opacity-70"
                         >
-                          {contactStatus === "sending"
-                            ? "Sending..."
-                            : "Send Message"}
+                          {contactStatus === "sending" ? "Sending..." : "Send Message"}
                         </button>
                       </div>
                     </form>
                   )}
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : page === "donate" ? (
+          <section className="px-6 pb-24 pt-20 lg:px-8 lg:pt-24">
+            <div className="mx-auto max-w-6xl">
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E0C15A]">
+                  Support the Mission
+                </p>
+                <h1 className="mt-4 text-4xl font-black text-white sm:text-5xl lg:text-6xl">
+                  We don’t just rescue dogs. We rebuild them.
+                </h1>
+                <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
+                  Every dog that enters Pack Life Dog Rescue And Rehabilitation
+                  is given structure, decompression, rehabilitation, and an
+                  honest chance at long-term success.
+                </p>
+              </div>
+
+              <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+                <div
+                  className={`rounded-[2rem] border border-[#2E5B86]/80 ${CardGradient} p-8 shadow-[0_24px_48px_rgba(0,0,0,0.18)]`}
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E0C15A]">
+                    Why Support Pack Life
+                  </p>
+                  <h2 className="mt-4 text-3xl font-black text-white">
+                    Your support helps fund real rehabilitation.
+                  </h2>
+                  <p className="mt-5 text-[#DCE7F2] leading-8">
+                    Pack Life is built around calm structure, observation,
+                    behavioral rehabilitation, and responsible placement. Your
+                    support helps cover the work that happens before a dog is
+                    ever considered ready for placement.
+                  </p>
+
+                  <div className="mt-8 grid gap-4">
+                    {[
+                      [
+                        "Food and daily care",
+                        "Consistent daily support, kennel supplies, and routine care that keep dogs stable and moving forward.",
+                      ],
+                      [
+                        "Veterinary support",
+                        "Health evaluations, treatment needs, medication support, and essential care before placement.",
+                      ],
+                      [
+                        "Training and rehabilitation",
+                        "Structure, decompression, leash work, behavior support, and long-term rehabilitation that holds.",
+                      ],
+                    ].map(([title, text]) => (
+                      <div
+                        key={title}
+                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] p-5"
+                      >
+                        <p className="text-sm font-bold text-white">{title}</p>
+                        <p className="mt-2 text-sm leading-7 text-[#B8C9DB]">
+                          {text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 rounded-[1.5rem] border border-[#D4AF37]/20 bg-[#D4AF37]/10 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E0C15A]">
+                      Important Notice
+                    </p>
+                    <p className="mt-3 text-sm leading-7 text-[#DCE7F2]">
+                      Pack Life Dog Rescue And Rehabilitation is a nonprofit
+                      organization with 501(c)(3) status currently pending.
+                      Donations may become tax-deductible upon approval.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid gap-6">
+                  <div
+                    className={`rounded-[2rem] border border-[#2E5B86]/80 ${DarkGradient} p-8 shadow-[0_24px_48px_rgba(0,0,0,0.18)]`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D4AF37]/18 bg-[#D4AF37]/10 text-[#E0C15A]">
+                        <HandCoins className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E0C15A]">
+                          One-Time Support
+                        </p>
+                        <h2 className="mt-1 text-2xl font-black text-white">
+                          Donate now
+                        </h2>
+                      </div>
+                    </div>
+
+                    <p className="mt-5 text-[#DCE7F2] leading-8">
+                      Help cover immediate care, veterinary needs,
+                      rehabilitation, and operational support for dogs in the
+                      Pack Life program.
+                    </p>
+
+                    <div className="mt-6 grid gap-3">
+                      {[
+                        "$25 — Daily care support",
+                        "$50 — Training and structure support",
+                        "$100 — Rehabilitation support",
+                      ].map((text) => (
+                        <div
+                          key={text}
+                          className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-4 py-3 text-sm font-medium text-[#DCE7F2]"
+                        >
+                          {text}
+                        </div>
+                      ))}
+                    </div>
+
+                    <a
+                      href={oneTimeDonateLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
+                    >
+                      Donate Now <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </div>
+
+                  <div
+                    className={`rounded-[2rem] border border-[#2E5B86]/80 ${CardGradient} p-8 shadow-[0_24px_48px_rgba(0,0,0,0.18)]`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D4AF37]/18 bg-[#D4AF37]/10 text-[#E0C15A]">
+                        <Heart className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E0C15A]">
+                          Monthly Giving
+                        </p>
+                        <h2 className="mt-1 text-2xl font-black text-white">
+                          Join the Pack
+                        </h2>
+                      </div>
+                    </div>
+
+                    <p className="mt-5 text-[#DCE7F2] leading-8">
+                      Monthly support helps Pack Life build consistency, plan
+                      better, and continue funding care and rehabilitation over
+                      time.
+                    </p>
+
+                    <div className="mt-6 grid gap-3">
+                      {[
+                        "$10/month — Basic mission support",
+                        "$25/month — Training support",
+                        "$50/month — Sponsor a dog’s rehabilitation",
+                      ].map((text) => (
+                        <div
+                          key={text}
+                          className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-4 py-3 text-sm font-medium text-[#DCE7F2]"
+                        >
+                          {text}
+                        </div>
+                      ))}
+                    </div>
+
+                    <a
+                      href={monthlyDonateLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-7 inline-flex items-center gap-2 rounded-2xl border border-[#D4AF37]/30 bg-white/[0.03] px-6 py-3 font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#D4AF37] hover:text-[#E0C15A]"
+                    >
+                      Join the Pack <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -625,18 +814,30 @@ export default function PackLifeWebsite() {
                     Rescue done the right way.
                   </h1>
 
-                  <p className="mt-6 max-w-2xl text-lg leading-8 text-[#DCE7F2]">
+                  <p className="mt-4 max-w-2xl text-xl font-semibold leading-8 text-white">
+                    We don’t just rescue dogs — we rebuild them.
+                  </p>
+
+                  <p className="mt-4 max-w-2xl text-lg leading-8 text-[#DCE7F2]">
                     Structure. Decompression. Real rehabilitation. Built for
                     long-term outcomes, not rushed placements.
                   </p>
 
                   <div className="mt-8 flex flex-wrap gap-4">
                     <a
-                      href="#contact"
-                      onClick={() => setPage("contact")}
+                      href="#donate"
+                      onClick={() => setPage("donate")}
                       className="inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
                     >
-                      Donate <ArrowUpRight className="h-4 w-4" />
+                      Donate Now <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                    <a
+                      href={monthlyDonateLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-2xl border border-[#D4AF37]/30 bg-white/[0.03] px-6 py-3 font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#D4AF37] hover:text-[#E0C15A]"
+                    >
+                      Join the Pack
                     </a>
                     <a
                       href="/PackLife_Adoption_Application.pdf"
@@ -751,6 +952,62 @@ export default function PackLifeWebsite() {
               </div>
             </section>
 
+            <section className="px-6 py-2 lg:px-8">
+              <div
+                className={`mx-auto max-w-7xl rounded-[2.25rem] border border-[#2E5B86]/80 ${CardGradient} p-8 shadow-[0_22px_46px_rgba(0,0,0,0.16)] lg:p-10`}
+              >
+                <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E0C15A]">
+                      Support the Mission
+                    </p>
+                    <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+                      Help fund structure, rehabilitation, and real second chances.
+                    </h2>
+                    <p className="mt-5 max-w-2xl text-lg leading-8 text-[#DCE7F2]">
+                      Every dog we take in is built the right way before
+                      placement. Your support helps cover daily care,
+                      veterinary needs, behavior work, and the structured
+                      rehabilitation process behind every outcome.
+                    </p>
+
+                    <div className="mt-7 flex flex-wrap gap-4">
+                      <a
+                        href="#donate"
+                        onClick={() => setPage("donate")}
+                        className="inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
+                      >
+                        Donate Now <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                      <a
+                        href={monthlyDonateLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-2xl border border-[#D4AF37]/30 bg-white/[0.03] px-6 py-3 font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#D4AF37] hover:text-[#E0C15A]"
+                      >
+                        Become a Monthly Supporter
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="grid gap-4">
+                    {[
+                      "$25 → Daily care",
+                      "$50 → Training and structure",
+                      "$100 → Rehabilitation support",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-5 py-4 text-base font-semibold text-white"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section id="about" className="px-6 py-24 lg:px-8">
               <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
                 <div
@@ -833,6 +1090,57 @@ export default function PackLifeWebsite() {
               </div>
             </section>
 
+            <section className="px-6 py-8 lg:px-8">
+              <div
+                className={`mx-auto max-w-7xl rounded-[2.25rem] border border-[#2E5B86]/80 ${DarkGradient} p-8 shadow-[0_22px_46px_rgba(0,0,0,0.16)] lg:p-10`}
+              >
+                <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#E0C15A]">
+                      Join the Pack
+                    </p>
+                    <h2 className="mt-4 text-3xl font-black text-white sm:text-4xl">
+                      Monthly support creates real stability.
+                    </h2>
+                    <p className="mt-5 max-w-2xl text-lg leading-8 text-[#DCE7F2]">
+                      Consistent monthly support helps Pack Life plan ahead,
+                      care for dogs the right way, and keep real rehabilitation
+                      moving without shortcuts.
+                    </p>
+
+                    <a
+                      href={monthlyDonateLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
+                    >
+                      Join Monthly <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </div>
+
+                  <div className="grid gap-4">
+                    {[
+                      "$10/month — Basic support",
+                      "$25/month — Training support",
+                      "$50/month — Sponsor a dog",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-5 py-4 text-base font-semibold text-white"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-8 rounded-2xl border border-[#D4AF37]/15 bg-[#D4AF37]/10 px-5 py-4 text-sm leading-7 text-[#DCE7F2]">
+                  501(c)(3) status pending. Donations may become tax-deductible
+                  upon approval.
+                </div>
+              </div>
+            </section>
+
             <section id="philosophy" className="px-6 py-24 lg:px-8">
               <div className="mx-auto max-w-5xl">
                 <div className="text-center">
@@ -843,8 +1151,9 @@ export default function PackLifeWebsite() {
                     Principles that drive every decision.
                   </h2>
                   <p className="mt-4 mx-auto max-w-2xl text-[#DCE7F2] leading-8">
-                    Click each principle below to learn how Pack Life Dog Rescue And Rehabilitation
-                    approaches rehabilitation, structure, and placement.
+                    Click each principle below to learn how Pack Life Dog Rescue
+                    And Rehabilitation approaches rehabilitation, structure, and
+                    placement.
                   </p>
                 </div>
 
