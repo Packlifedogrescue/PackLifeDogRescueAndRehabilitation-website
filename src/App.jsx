@@ -9,6 +9,7 @@ import {
   Mail,
   Compass,
 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function PackLifeWebsite() {
   const [active, setActive] = useState("about");
@@ -907,6 +908,7 @@ export default function PackLifeWebsite() {
           </>
         )}
       </main>
+      <Analytics />
     </div>
   );
 }
