@@ -21,7 +21,7 @@ export default function PackLifeWebsite() {
   const [showContactThankYou, setShowContactThankYou] = useState(false);
   const [selectedInquiryType, setSelectedInquiryType] = useState("");
 
-  // REPLACE THESE WITH YOUR REAL STRIPE LINKS LATER
+  // Replace these later with your real Stripe links
   const oneTimeDonateLink = "#";
   const monthlyDonateLink = "#";
 
@@ -299,7 +299,7 @@ export default function PackLifeWebsite() {
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
                   Meet the people responsible for protecting the mission,
                   guiding operations, and building Pack Life Dog Rescue And
-                  Reahabilitation the right way.
+                  Rehabilitation the right way.
                 </p>
               </div>
 
@@ -337,9 +337,9 @@ export default function PackLifeWebsite() {
                   Apply with clarity.
                 </h1>
                 <p className="mt-5 text-lg leading-8 text-[#DCE7F2]">
-                  Start with the path that fits you best. Pack Life reviews every
-                  application with structure, honesty, and long-term placement
-                  success in mind.
+                  Start with the path that fits you best. Pack Life reviews
+                  every application with structure, honesty, and long-term
+                  placement success in mind.
                 </p>
               </div>
 
@@ -827,7 +827,7 @@ export default function PackLifeWebsite() {
                     <a
                       href="#donate"
                       onClick={() => setPage("donate")}
-                      className="inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
+                      className="inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] shadow-[0_10px_28px_rgba(212,175,55,0.22)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A] hover:shadow-[0_14px_34px_rgba(212,175,55,0.28)]"
                     >
                       Donate Now <ArrowUpRight className="h-4 w-4" />
                     </a>
@@ -835,7 +835,7 @@ export default function PackLifeWebsite() {
                       href={monthlyDonateLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-2xl border border-[#D4AF37]/30 bg-white/[0.03] px-6 py-3 font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#D4AF37] hover:text-[#E0C15A]"
+                      className="rounded-2xl border border-[#D4AF37]/30 bg-white/[0.03] px-6 py-3 font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:border-[#D4AF37] hover:text-[#E0C15A] hover:shadow-[0_12px_26px_rgba(0,0,0,0.16)]"
                     >
                       Join the Pack
                     </a>
@@ -865,7 +865,7 @@ export default function PackLifeWebsite() {
                           key={item.title}
                           className="rounded-[1.5rem] border border-[#2E5B86]/80 bg-[linear-gradient(180deg,rgba(24,58,91,0.76)_0%,rgba(16,41,68,0.88)_100%)] p-5 shadow-[0_16px_30px_rgba(0,0,0,0.12)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_40px_rgba(0,0,0,0.16)]"
                         >
-                          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#D4AF37]/18 bg-[#D4AF37]/10 text-[#E0C15A]">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#D4AF37]/18 bg-[#D4AF37]/10 text-[#E0C15A] shadow-[0_0_18px_rgba(212,175,55,0.12)]">
                             <Icon className="h-4 w-4" />
                           </div>
                           <h3 className="mt-4 font-bold text-white">
@@ -884,7 +884,7 @@ export default function PackLifeWebsite() {
                   <div className="absolute inset-0 rounded-[2.25rem] bg-[radial-gradient(circle_at_top_right,rgba(224,193,90,0.18),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(59,108,153,0.20),transparent_30%)] blur-2xl" />
                   <div className="relative overflow-hidden rounded-[2.25rem] border border-[#2E5B86]/80 bg-[linear-gradient(180deg,rgba(24,58,91,0.82)_0%,rgba(16,41,68,0.96)_100%)] p-6 shadow-[0_30px_70px_rgba(0,0,0,0.22)]">
                     <div className="rounded-[1.75rem] border border-[#D4AF37]/18 bg-[linear-gradient(180deg,rgba(18,46,74,0.98)_0%,rgba(14,35,56,0.98)_100%)] p-6">
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-start justify-between gap-4">
                         <div>
                           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E0C15A]">
                             Pack Life Dog Rescue And Rehabilitation Standard
@@ -893,8 +893,9 @@ export default function PackLifeWebsite() {
                             We do not place dogs. We build them first.
                           </h2>
                         </div>
-                        <div className="rounded-2xl border border-[#D4AF37]/18 bg-[#D4AF37]/10 p-3 text-[#E0C15A]">
-                          <Compass className="h-5 w-5" />
+
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#D4AF37]/25 bg-[#D4AF37]/10 text-[#E0C15A] shadow-[0_0_18px_rgba(212,175,55,0.15)]">
+                          <Compass className="h-4 w-4" />
                         </div>
                       </div>
 
@@ -975,7 +976,7 @@ export default function PackLifeWebsite() {
                       <a
                         href="#donate"
                         onClick={() => setPage("donate")}
-                        className="inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
+                        className="inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] shadow-[0_10px_28px_rgba(212,175,55,0.22)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A] hover:shadow-[0_14px_34px_rgba(212,175,55,0.28)]"
                       >
                         Donate Now <ArrowUpRight className="h-4 w-4" />
                       </a>
@@ -998,7 +999,7 @@ export default function PackLifeWebsite() {
                     ].map((item) => (
                       <div
                         key={item}
-                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-5 py-4 text-base font-semibold text-white"
+                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-5 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
                       >
                         {item}
                       </div>
@@ -1112,7 +1113,7 @@ export default function PackLifeWebsite() {
                       href={monthlyDonateLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A]"
+                      className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944] shadow-[0_10px_28px_rgba(212,175,55,0.22)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#E0C15A] hover:shadow-[0_14px_34px_rgba(212,175,55,0.28)]"
                     >
                       Join Monthly <ArrowUpRight className="h-4 w-4" />
                     </a>
@@ -1126,7 +1127,7 @@ export default function PackLifeWebsite() {
                     ].map((item) => (
                       <div
                         key={item}
-                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-5 py-4 text-base font-semibold text-white"
+                        className="rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-5 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(0,0,0,0.10)]"
                       >
                         {item}
                       </div>
