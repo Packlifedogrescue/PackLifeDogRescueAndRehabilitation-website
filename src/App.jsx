@@ -881,9 +881,9 @@ export default function PackLifeWebsite() {
                       Important Notice
                     </p>
                     <p className="mt-3 text-sm leading-7 text-[#DCE7F2]">
-                      Pack Life Dog Rescue And Rehabilitation is a nonprofit
-                      organization with 501(c)(3) status currently pending.
-                      Donations may become tax-deductible upon approval.
+                      Pack Life Dog Rescue And Rehabilitation is an approved
+                      501(c)(3) nonprofit organization. Donations are
+                      tax-deductible to the extent allowed by law.
                     </p>
                   </div>
                 </div>
@@ -1540,7 +1540,7 @@ export default function PackLifeWebsite() {
                 </div>
 
                 <div className="mt-8 rounded-2xl border border-[#D4AF37]/15 bg-[#D4AF37]/10 px-5 py-4 text-sm leading-7 text-[#DCE7F2]">
-                  501(c)(3) status pending. Donations may become tax-deductible upon approval.
+                  Pack Life Dog Rescue And Rehabilitation is an approved 501(c)(3) nonprofit organization. Donations are tax-deductible to the extent allowed by law.
                 </div>
               </div>
             </section>
@@ -1652,7 +1652,7 @@ export default function PackLifeWebsite() {
         <div className="mx-auto mt-10 max-w-7xl border-t border-[#2E5B86]/50 pt-6">
           <div className="flex flex-col gap-3 text-sm text-[#8FA6BE] lg:flex-row lg:items-center lg:justify-between">
             <p>© 2026 Pack Life Dog Rescue And Rehabilitation. All rights reserved.</p>
-            <p>501(c)(3) status pending. Donations may become tax-deductible upon approval.</p>
+            <p>Pack Life Dog Rescue And Rehabilitation is a 501(c)(3) nonprofit organization. EIN 41-4616591. Donations are tax-deductible to the extent allowed by law.</p>
           </div>
         </div>
       </footer>
@@ -1716,8 +1716,9 @@ export default function PackLifeWebsite() {
                 </h2>
 
                 <p className="mt-5 text-[#DCE7F2] leading-8">
-                  Pack Life Dog Rescue And Rehabilitation is currently finalizing
-                  setup, including 501(c)(3) approval and donation processing.
+                  Pack Life Dog Rescue And Rehabilitation is an approved
+                  501(c)(3) nonprofit. We’re currently finalizing donation
+                  processing.
                 </p>
 
                 <p className="mt-4 text-[#DCE7F2] leading-8">
