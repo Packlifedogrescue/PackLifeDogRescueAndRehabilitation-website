@@ -238,7 +238,7 @@ export default function PackLifeWebsite() {
     setPage(nextPage);
     setMobileMenuOpen(false);
     window.location.hash = nextPage === "home" ? "" : nextPage;
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const handleContactSubmit = async (event) => {
