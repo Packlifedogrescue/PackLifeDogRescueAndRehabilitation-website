@@ -1289,11 +1289,7 @@ export default function PackLifeWebsite() {
             <section className="px-6 pb-24 pt-16 lg:px-8 lg:pt-20">
               <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div className="animate-[fadeIn_0.5s_ease]">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#E0C15A]">
-                    Built on Structure. Driven by Purpose. Committed for Life.
-                  </div>
-
-                  <h1 className="mt-7 max-w-4xl text-4xl font-black leading-[0.98] text-white sm:text-5xl lg:text-[5rem]">
+                  <h1 className="max-w-4xl text-4xl font-black leading-[0.98] text-white sm:text-5xl lg:text-[5rem]">
                     Rescue done the right way.
                   </h1>
 
