@@ -1264,7 +1264,7 @@ export default function PackLifeWebsite() {
                     onClick={openDonateModal}
                     className="mt-7 inline-flex items-center gap-2 rounded-2xl bg-[#D4AF37] px-6 py-3 font-bold text-[#102944]"
                   >
-                    Open Support Modal <ArrowUpRight className="h-4 w-4" />
+                    See Support Options <ArrowUpRight className="h-4 w-4" />
                   </button>
                 </div>
               </div>
@@ -1516,7 +1516,7 @@ export default function PackLifeWebsite() {
                             onClick={openDonateModal}
                             className="rounded-2xl border border-[#2E5B86]/70 px-6 py-3 text-white hover:bg-white/5"
                           >
-                            Open Support Modal
+                            See Support Options
                           </button>
                         </div>
                       </form>
