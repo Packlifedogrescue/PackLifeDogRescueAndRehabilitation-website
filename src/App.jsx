@@ -756,16 +756,30 @@ export default function PackLifeWebsite() {
                           required
                           className="w-full rounded-2xl border border-[#2E5B86]/70 bg-white/[0.03] px-4 py-3 text-white outline-none transition focus:border-[#D4AF37]/40 focus:bg-white/[0.05]"
                         >
-                          <option value="">Select inquiry type</option>
-                          <option value="Adoption">Adoption</option>
-                          <option value="Foster">Foster</option>
-                          <option value="Surrender / Intake">
+                          <option value="" className="text-[#102944]">
+                            Select inquiry type
+                          </option>
+                          <option value="Adoption" className="text-[#102944]">
+                            Adoption
+                          </option>
+                          <option value="Foster" className="text-[#102944]">
+                            Foster
+                          </option>
+                          <option
+                            value="Surrender / Intake"
+                            className="text-[#102944]"
+                          >
                             Surrender / Intake
                           </option>
-                          <option value="Partnership / Collaboration">
+                          <option
+                            value="Partnership / Collaboration"
+                            className="text-[#102944]"
+                          >
                             Partnership / Collaboration
                           </option>
-                          <option value="General">General</option>
+                          <option value="General" className="text-[#102944]">
+                            General
+                          </option>
                         </select>
                       </label>
 
